@@ -2,7 +2,6 @@ package com.example.shoppinitemroomdatabase.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.shoppinitemroomdatabase.models.CategoryModel
 import com.example.shoppinitemroomdatabase.models.ItemModel
 import com.example.shoppinitemroomdatabase.utils.Graph
 import kotlinx.coroutines.Dispatchers
@@ -51,9 +50,9 @@ class ItemViewModel: ViewModel() {
         _isEditingItem.value = !_isEditingItem.value
     }
 
-    fun setSelectedItem(itemModel: ItemModel){
-        _selectedItem.value = itemModel
-    }
+//    fun setSelectedItem(itemModel: ItemModel){
+//        _selectedItem.value = itemModel
+//    }
 
     fun addItem(itemModel: ItemModel){
         viewModelScope.launch(
@@ -89,7 +88,7 @@ class ItemViewModel: ViewModel() {
         }
     }
 
-    fun setItemTitle(itemName: String){
-        _nameOfItem.value = itemName
-    }
+//    fun setItemTitle(itemName: String){
+//        _nameOfItem.value = itemName
+//    }
 }

@@ -1,6 +1,5 @@
 package com.example.shoppinitemroomdatabase.screens
 
-import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost

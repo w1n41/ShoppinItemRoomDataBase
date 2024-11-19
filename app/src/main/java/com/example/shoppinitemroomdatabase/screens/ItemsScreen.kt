@@ -47,16 +47,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.shoppinitemroomdatabase.R.color.auburn
 import com.example.shoppinitemroomdatabase.R.color.black
 import com.example.shoppinitemroomdatabase.R.color.black_bean
 import com.example.shoppinitemroomdatabase.R.color.falu_red
 import com.example.shoppinitemroomdatabase.R.color.white
-import com.example.shoppinitemroomdatabase.dummy.Dummy
 import com.example.shoppinitemroomdatabase.models.ItemModel
-import com.example.shoppinitemroomdatabase.screens.items.CategoryItems
 import com.example.shoppinitemroomdatabase.screens.items.ItemsItems
 import com.example.shoppinitemroomdatabase.utils.ScreensRoute
 import com.example.shoppinitemroomdatabase.viewmodels.CategoryViewModel
@@ -108,7 +105,7 @@ fun ItemsScreen(
             }
         },
         content = {innerPadding ->
-            MainContent(Modifier.padding(innerPadding), itemViewModel, navHostController, category!!.id)
+            MainContent(Modifier.padding(innerPadding), itemViewModel, category!!.id)
         }
     )
 }
@@ -118,7 +115,6 @@ fun ItemsScreen(
 fun MainContent(
     modifier: Modifier,
     itemViewModel: ItemViewModel,
-    navHostController: NavHostController,
     categoryId: Long
 ) {
     val itemList by itemViewModel.listOfItems.collectAsState()

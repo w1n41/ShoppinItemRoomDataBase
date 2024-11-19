@@ -37,7 +37,6 @@ fun ItemsItems(
     itemModel: ItemModel,
     onEditClicked:(itemModel: ItemModel) -> Unit
 ){
-    val selectedItem by itemViewModel.selectedItem.collectAsState()
     Card(
         modifier = Modifier
             .fillMaxWidth()
