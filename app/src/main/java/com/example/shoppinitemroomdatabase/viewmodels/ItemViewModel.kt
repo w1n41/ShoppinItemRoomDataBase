@@ -41,7 +41,6 @@ class ItemViewModel: ViewModel() {
     }
 
     fun startEditingItem(itemModel: ItemModel){
-        _selectedItem.value = itemModel
         _isEditingItem.value = !_isEditingItem.value
     }
 

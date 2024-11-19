@@ -155,6 +155,7 @@ fun MainContent(
                     itemViewModel,
                     itemModel = item,
                     onEditClicked = { selectedItem ->
+                        itemViewModel.setSelectedItem(selectedItem)
                         itemViewModel.startEditingItem(selectedItem)
                     }
                 )
@@ -327,10 +328,11 @@ fun ItemEditDialog(
                         ),
                     onClick = {
                         if(itemName.isNotBlank()){
+
                             itemViewModel.editItem(
                                 itemModel.copy(name = itemName)
                             )
-                            itemViewModel.stopEditingItem()
+
                         }
                         else {
                             Toast.makeText(context, "Item name can't be empty", Toast.LENGTH_LONG).show()
@@ -339,7 +341,7 @@ fun ItemEditDialog(
                     colors = ButtonDefaults.buttonColors(Color.Transparent)
                 ) {
                     Text(
-                        text = "Add new item",
+                        text = "Test",
                         color = colorResource(white)
                     )
                 }
