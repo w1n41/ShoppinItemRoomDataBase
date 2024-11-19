@@ -50,9 +50,9 @@ class ItemViewModel: ViewModel() {
         _isEditingItem.value = !_isEditingItem.value
     }
 
-//    fun setSelectedItem(itemModel: ItemModel){
-//        _selectedItem.value = itemModel
-//    }
+    fun setSelectedItem(itemModel: ItemModel){
+        _selectedItem.value = itemModel
+    }
 
     fun addItem(itemModel: ItemModel){
         viewModelScope.launch(
@@ -87,8 +87,4 @@ class ItemViewModel: ViewModel() {
             Graph.repository.deleteItem(itemModel)
         }
     }
-
-//    fun setItemTitle(itemName: String){
-//        _nameOfItem.value = itemName
-//    }
 }
